@@ -1,0 +1,40 @@
+{
+  "project": {
+    "name": "Research Compendium",
+    "language": "pt-BR",
+    "stack": ["python", "r", "quarto"],
+    "manuscriptPath": "manuscript/manuscript.qmd",
+    "dataRawPath": "data/raw",
+    "dataProcessedPath": "data/processed",
+    "resultsPath": "results",
+    "qualityReportsPath": "quality_reports",
+    "orchestrator": "run.ps1"
+  },
+  "qualityThresholds": {
+    "commit": 80,
+    "share": 90,
+    "submit": 95
+  },
+  "rules": {
+    "directory": ".antigravitycli/rules",
+    "alwaysLoad": [
+      "meta-governance.md",
+      "quality-gates.md",
+      "verification-protocol.md"
+    ],
+    "loadOnDemand": [
+      "cross-artifact-review.md",
+      "post-flight-verification.md",
+      "proofreading-protocol.md",
+      "r-code-conventions.md"
+    ]
+  },
+  "skills": {
+    "directory": ".antigravitycli/skills"
+  },
+  "memory": {
+    "file": ".antigravitycli/MEMORY.md",
+    "maxLinesLoaded": 200
+  },
+  "plansDirectory": "quality_reports/plans"
+}

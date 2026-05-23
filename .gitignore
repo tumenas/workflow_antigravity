@@ -1,0 +1,86 @@
+# Python e ambientes virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.ipynb_checkpoints/
+
+# Jupyter & Quarto
+.quarto/
+*_files/
+*_cache/
+.ipynb_checkpoints/
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# LaTeX (arquivos auxiliares de compilação do Quarto/LaTeX)
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*-blx.bib
+
+# Nota: Se você preferir commitar o PDF final do manuscrito,
+# remova a linha '*.pdf' acima ou adicione '!manuscript/manuscript.pdf'.
+
+# Arquivos de Sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Arquivos locais e temporários do Antigravity
+.antigravitycli/state/
+.antigravitycli/MEMORY.local.md
+
+# Configurações do IDE
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Relatórios de Qualidade (Ignorar relatórios específicos de sessões/planos/especificações)
+quality_reports/plans/*
+quality_reports/specs/*
+quality_reports/session_logs/*
+quality_reports/merges/*
+quality_reports/decisions/*
+quality_reports/checkpoints/*
+quality_reports/preregistrations/*
+!quality_reports/plans/.gitkeep
+!quality_reports/specs/.gitkeep
+!quality_reports/session_logs/.gitkeep
+!quality_reports/merges/.gitkeep
+!quality_reports/decisions/.gitkeep
+!quality_reports/checkpoints/.gitkeep
+!quality_reports/preregistrations/.gitkeep
+
+# Logs e relatórios locais (conteúdo é específico de sessão, não compartilhar)
+quality_reports/plans/*
+quality_reports/specs/*
+quality_reports/session_logs/*
+quality_reports/merges/*
+quality_reports/decisions/*
+quality_reports/checkpoints/*
+quality_reports/preregistrations/*
+!quality_reports/**/.gitkeep

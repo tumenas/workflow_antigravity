@@ -1,0 +1,17 @@
+project:
+  type: default
+  output-dir: ../docs
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    code-fold: true
+    self-contained: true
+  pdf:
+    documentclass: article
+    number-sections: true
+    toc: false
+    keep-tex: true
+    pdf-engine: xelatex

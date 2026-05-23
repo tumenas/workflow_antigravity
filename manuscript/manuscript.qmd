@@ -1,0 +1,118 @@
+---
+title: "Template de Artigo Científico Reprodutível"
+subtitle: "Aplicação prática do padrão Research Compendium em Python e Quarto"
+author:
+  - name: Felipe
+    orcid: 0000-0000-0000-0000
+    email: felipe@exemplo.com
+    affiliations:
+      - name: Universidade Exemplo
+        department: Departamento de Ciência de Dados
+        address: Salvador, Bahia, Brasil
+date: last-modified
+abstract: |
+  Este documento serve como modelo para a redação de artigos científicos reprodutíveis utilizando o Quarto e Python. O resumo (abstract) deve sintetizar de forma clara o problema investigado, os métodos aplicados, os resultados obtidos (incluindo métricas numéricas se aplicável) e as conclusões principais. O padrão Research Compendium garante que qualquer leitor ou revisor possa reproduzir exatamente estes resultados a partir dos dados brutos fornecidos no repositório.
+keywords:
+  - Reprodutibilidade
+  - Research Compendium
+  - Python
+  - Quarto
+bibliography: references.bib
+lang: pt
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    code-fold: true
+  pdf:
+    documentclass: article
+    number-sections: true
+    toc: false
+    geometry:
+      - top=30mm
+      - bottom=30mm
+      - left=25mm
+      - right=25mm
+---
+
+# Introdução
+
+A introdução deve contextualizar o problema de pesquisa, revisar brevemente a literatura pertinente e apresentar o objetivo do trabalho. Em pesquisas reprodutíveis, é importante conectar a teoria diretamente à implementação computacional.
+
+Como discutido na literatura clássica por @wilson2017good, a organização dos arquivos de uma pesquisa desempenha um papel crucial na capacidade de terceiros reproduzirem as análises. O uso de ferramentas como o Quarto e ambientes controlados minimiza o esforço para validar descobertas científicas [@marwick2018packaging].
+
+# Metodologia
+
+Os métodos descrevem as técnicas de coleta e processamento de dados. 
+
+## Dados e Amostra
+
+Os dados brutos originais estão salvos de forma imutável em `data/raw/dados_brutos.csv`. O processamento inicial consistiu na remoção de valores nulos e no cálculo de variáveis derivadas, implementado no script `analysis/01_clean_data.py`. Os dados limpos foram salvos em `data/processed/dados_processados.csv`.
+
+## Modelo Estatístico
+
+Ajustamos um modelo de regressão linear para avaliar o impacto da idade e do marcador biológico sobre a pressão arterial sistólica. A equação do modelo é dada por:
+
+$$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \sum_{j} \gamma_j D_{ji} + \epsilon_i$$ {#eq-modelo}
+
+Onde:
+
+- $Y_i$: Pressão Arterial Sistólica (mmHg) do indivíduo $i$.
+- $X_{1i}$: Idade (anos).
+- $X_{2i}$: Nível do Marcador Biológico (u/mL).
+- $D_{ji}$: Variáveis dummy para o grupo de tratamento.
+- $\epsilon_i$: Erro aleatório.
+
+# Resultados
+
+A análise foi executada utilizando Python e as bibliotecas científicas especificadas em `requirements.txt`.
+
+## Análise Descritiva
+
+A distribuição do marcador biológico entre os diferentes grupos de tratamento está ilustrada na @fig-boxplot. Nota-se visualmente a variabilidade entre os grupos.
+
+![Distribuição do Marcador Biológico por Grupo de Tratamento.](../results/figures/boxplot_marcador_grupo.png){#fig-boxplot width=80% fig-align="center"}
+
+A @fig-dispersao exibe a relação entre a idade dos participantes e a pressão arterial sistólica, separada por grupo, com as respectivas retas de tendência linear estimadas.
+
+![Dispersão entre Idade e Pressão Arterial com retas de tendência por Grupo.](../results/figures/dispersao_pressao_idade.png){#fig-dispersao width=80% fig-align="center"}
+
+## Modelo de Regressão
+
+Os resultados do modelo de regressão linear ajustado conforme a @eq-modelo são apresentados na @tbl-regressao.
+
+```{python}
+#| label: tbl-regressao
+#| tbl-cap: "Coeficientes do modelo de regressão linear (variável dependente: pressão arterial sistólica)."
+#| echo: false
+
+import pandas as pd
+import os
+
+coef_path = "../results/tables/coeficientes_regressao.csv"
+
+if os.path.exists(coef_path):
+    df_coef = pd.read_csv(coef_path, index_index=False if 'Unnamed: 0' in pd.read_csv(coef_path, nrows=1).columns else None)
+    # Se o pandas ler a coluna de índices sem nome, vamos renomeá-la
+    if 'Unnamed: 0' in df_coef.columns:
+        df_coef = df_coef.rename(columns={'Unnamed: 0': 'Variável'})
+    
+    # Exibir tabela formatada em Markdown
+    from IPython.display import Markdown
+    Markdown(df_coef.to_markdown(index=False))
+else:
+    from IPython.display import Markdown
+    Markdown("*Aviso: Os resultados da regressão ainda não foram gerados. Execute o script `analysis/02_analysis.py` para visualizar a tabela.*")
+```
+
+# Discussão e Conclusão
+
+A discussão contextualiza os achados em relação à literatura existente. Os resultados estatísticos indicam se as hipóteses iniciais foram confirmadas.
+
+Em suma, este compêndio fornece um fluxo de trabalho estruturado e auditável que atende às diretrizes de ciência aberta e reprodutível. Toda a pipeline de compilação deste manuscrito e execução de códigos pode ser automatizada com o arquivo `Makefile` ou o script `run.ps1` inclusos na raiz do projeto.
+
+# Referências
+
+::: {#refs}
+:::
