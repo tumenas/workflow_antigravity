@@ -20,6 +20,7 @@ workflow/
 │   │   ├── cross-artifact-review.md  # Consistência código ↔ manuscrito
 │   │   ├── post-flight-verification.md  # Checklist pós-execução
 │   │   ├── proofreading-protocol.md  # Protocolo de revisão de escrita
+│   │   ├── python-code-conventions.md # Boas práticas de código Python
 │   │   ├── r-code-conventions.md     # Boas práticas de código R
 │   │   └── verification-protocol.md  # Verificação final de sanidade
 │   └── skills/                  # Habilidades acadêmicas sob demanda
