@@ -32,7 +32,8 @@ workflow/
 │       ├── lit-review.md        # Estruturação de revisão de literatura
 │       ├── research-ideation.md # Ideação e especificação de modelos
 │       ├── interview-me.md      # Entrevista socrática de metodologia
-│       └── qa-quarto.md         # QA do documento Quarto compilado
+│       ├── qa-quarto.md         # QA do documento Quarto compilado
+│       └── tufte-viz.md         # Ideação e crítica de gráficos (Tufte)
 │
 ├── data/                        # Dados do projeto
 │   ├── raw/                     # DADOS BRUTOS (originais, SOMENTE LEITURA)
@@ -136,6 +137,7 @@ Este compêndio inclui instruções para o assistente de IA em `.antigravitycli/
 | `research-ideation` | Brainstorming de questões, modelos e robustez |
 | `interview-me` | Entrevista socrática para clarificar metodologia |
 | `qa-quarto` | Revisão adversarial do documento Quarto compilado |
+| `tufte-viz` | Ideação e crítica de gráficos com base nos princípios de Edward Tufte |
 
 ---
 
