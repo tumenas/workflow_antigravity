@@ -48,8 +48,8 @@ Desktop.ini
 .DS_Store
 
 # Arquivos locais e temporários do Antigravity
-.antigravitycli/state/
-.antigravitycli/MEMORY.local.md
+.agents/state/
+.agents/MEMORY.local.md
 
 # Configurações do IDE
 .vscode/*

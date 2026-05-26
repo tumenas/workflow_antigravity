@@ -16,9 +16,9 @@
 - **Data immutability** — NEVER modify files in `data/raw/`; all edits go to `data/processed/`
 - **Quality gates** — nothing is considered done below 80/100 quality score
 - **Continuity** — write `quality_reports/session_logs/SESSION_STATE.md` at session end; read it at session start
-- **[LEARN] tags** — when corrected, save `[LEARN:category] wrong → right` to `.antigravitycli/MEMORY.md`
+- **[LEARN] tags** — when corrected, save `[LEARN:category] wrong → right` to `.agents/MEMORY.md`
 
-Cross-session context lives in `.antigravitycli/MEMORY.md`.
+Cross-session context lives in `.agents/MEMORY.md`.
 Past plans and session logs are in `quality_reports/`.
 
 ---
@@ -41,7 +41,7 @@ workflow/
 ├── results/
 │   ├── figures/       # Generated plots (300 DPI)
 │   └── tables/        # Generated tables (CSV/LaTeX)
-├── .antigravitycli/   # Antigravity assistant configuration
+├── .agents/           # Antigravity assistant configuration
 │   ├── ANTIGRAVITY.md # This file — assistant briefing
 │   ├── MEMORY.md      # Persistent cross-session memory
 │   ├── rules/         # Always-on behavioral rules
@@ -87,7 +87,7 @@ workflow/
 | `interview-me`       | Interactive Socratic interview to elicit and clarify research methodology |
 | `qa-quarto`          | Adversarial QA on the compiled Quarto document (layout, references, figures) |
 
-To invoke a skill, paste the content of the corresponding file in `.antigravitycli/skills/` and describe your task.
+To invoke a skill, paste the content of the corresponding file in `.agents/skills/` and describe your task.
 
 ---
 

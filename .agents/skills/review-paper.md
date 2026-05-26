@@ -30,13 +30,13 @@ Para cada problema: descrever o problema, indicar onde aparece, sugerir como res
 **5. Questões de Reprodutibilidade**
 - Os scripts em `analysis/` reproduzem os resultados reportados?
 - Os dados estão disponíveis ou documentados?
-- Aplicar o protocolo em `.antigravitycli/rules/cross-artifact-review.md`.
+- Aplicar o protocolo em `.agents/rules/cross-artifact-review.md`.
 
 **6. Qualidade da Escrita**
-- Aplicar `.antigravitycli/rules/proofreading-protocol.md` nos primeiros 3 parágrafos de cada seção.
+- Aplicar `.agents/rules/proofreading-protocol.md` nos primeiros 3 parágrafos de cada seção.
 
 **7. Pontuação de Qualidade**
-- Pontuar as 10 dimensões de `.antigravitycli/rules/quality-gates.md`.
+- Pontuar as 10 dimensões de `.agents/rules/quality-gates.md`.
 - Reportar pontuação total e justificar dimensões abaixo de 7.
 
 **8. Próximas Ações Prioritárias** (lista numerada e ordenada por impacto)

@@ -10,7 +10,7 @@ A organização segue o padrão **[Research Compendium](https://research-compend
 
 ```text
 workflow/
-├── .antigravitycli/             # Configuração do assistente de IA
+├── .agents/                     # Configuração do assistente de IA
 │   ├── ANTIGRAVITY.md           # Manual do assistente para este projeto
 │   ├── MEMORY.md                # Memória persistente entre sessões
 │   ├── settings.json            # Configurações e caminhos do projeto
@@ -124,7 +124,7 @@ make clean      # Limpar temporários
 
 ## 🧠 Habilidades Acadêmicas do Assistente
 
-Este compêndio inclui instruções para o assistente de IA em `.antigravitycli/skills/`. Para usar qualquer habilidade, abra uma conversa com o assistente e informe o nome da habilidade e o arquivo-alvo:
+Este compêndio inclui instruções para o assistente de IA em `.agents/skills/`. Para usar qualquer habilidade, abra uma conversa com o assistente e informe o nome da habilidade e o arquivo-alvo:
 
 | Habilidade | O que faz |
 |------------|-----------|
