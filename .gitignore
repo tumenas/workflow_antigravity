@@ -50,6 +50,8 @@ Desktop.ini
 # Arquivos locais e temporários do Antigravity
 .agents/state/
 .agents/MEMORY.local.md
+.antigravitycli/
+.antigravity/
 
 # Configurações do IDE
 .vscode/*
