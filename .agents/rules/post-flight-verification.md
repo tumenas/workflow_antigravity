@@ -35,4 +35,4 @@ Após rodar `.\run.ps1 paper` ou `quarto render manuscript/manuscript.qmd`:
 1. Identificar o erro exato (mensagem de erro, linha do script, arquivo afetado).
 2. Corrigir a causa raiz — nunca contornar sem entender a origem.
 3. Re-executar e repetir este checklist.
-4. Registrar em `.antigravitycli/MEMORY.md` se o erro revelar um padrão recorrente.
+4. Registrar em `.agents/MEMORY.md` se o erro revelar um padrão recorrente.

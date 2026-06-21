@@ -8,7 +8,7 @@
 
 ## Protocolo
 
-Aplicar `.antigravitycli/rules/proofreading-protocol.md` integralmente no arquivo informado.
+Aplicar `.agents/rules/proofreading-protocol.md` integralmente no arquivo informado.
 
 ### Processo
 

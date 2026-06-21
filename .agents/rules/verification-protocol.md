@@ -31,7 +31,7 @@ A tarefa produz o mesmo resultado se executada por um terceiro partindo do zero?
 
 ### 5. Registro de Aprendizados
 Se durante a execução foi descoberto algo novo (um bug, uma convenção, um comportamento inesperado):
-- Adicionar `[LEARN:categoria] descrição` em `.antigravitycli/MEMORY.md`.
+- Adicionar `[LEARN:categoria] descrição` em `.agents/MEMORY.md`.
 
 ## Declaração de Conclusão
 

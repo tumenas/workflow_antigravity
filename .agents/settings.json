@@ -16,7 +16,7 @@
     "submit": 95
   },
   "rules": {
-    "directory": ".antigravitycli/rules",
+    "directory": ".agents/rules",
     "alwaysLoad": [
       "meta-governance.md",
       "quality-gates.md",
@@ -30,10 +30,10 @@
     ]
   },
   "skills": {
-    "directory": ".antigravitycli/skills"
+    "directory": ".agents/skills"
   },
   "memory": {
-    "file": ".antigravitycli/MEMORY.md",
+    "file": ".agents/MEMORY.md",
     "maxLinesLoaded": 200
   },
   "plansDirectory": "quality_reports/plans"

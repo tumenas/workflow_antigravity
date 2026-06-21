@@ -39,7 +39,7 @@ Conduzir cada revisão de forma independente, sem consultar as outras:
 - Ameaças à validade interna e externa são discutidas?
 
 ### Lente 6 — Escrita e Prosa
-- Aplicar `.antigravitycli/rules/proofreading-protocol.md` integralmente.
+- Aplicar `.agents/rules/proofreading-protocol.md` integralmente.
 - Linguagem é precisa, acadêmica e consistente ao longo do texto?
 - Há seções ou parágrafos redundantes que podem ser cortados?
 
@@ -55,5 +55,5 @@ Conduzir cada revisão de forma independente, sem consultar as outras:
 Após as sete lentes, produzir:
 1. **Problemas críticos** (aparecem em 3+ lentes): listar e priorizar.
 2. **Problemas moderados** (aparecem em 1-2 lentes): listar.
-3. **Pontuação de qualidade** usando `.antigravitycli/rules/quality-gates.md`.
+3. **Pontuação de qualidade** usando `.agents/rules/quality-gates.md`.
 4. **Próximas ações** ordenadas por impacto.
