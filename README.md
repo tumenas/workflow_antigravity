@@ -139,6 +139,9 @@ Este compêndio inclui instruções para o assistente de IA em `.agents/skills/`
 | `qa-quarto` | Revisão adversarial do documento Quarto compilado |
 | `tufte-viz` | Ideação e crítica de gráficos com base nos princípios de Edward Tufte |
 
+> [!NOTE]
+> Mais de 40 habilidades acadêmicas adicionais e altamente especializadas (como `audit-reproducibility`, `stata-replication`, `compile-latex`, `preregister`, entre outras) estão disponíveis como diretórios em `.agents/skills/` e prontas para uso.
+
 ---
 
 ## 📜 Licenciamento
