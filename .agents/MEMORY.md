@@ -37,3 +37,5 @@ Entradas mais recentes no final do arquivo.
 [LEARN:quarto] Figuras referenciadas no manuscrito devem usar caminhos relativos a partir da pasta `manuscript/` (ex: `../results/figures/nome.png`).
 
 [LEARN:quarto] Rótulos de figuras (`#fig-`) e tabelas (`#tbl-`) no Quarto devem ser únicos em todo o documento.
+
+[LEARN:workflow] Arquivos de skills em `.agents/skills/` devem sempre referenciar caminhos sob `.agents/rules/` e nunca sob a pasta antiga `.antigravitycli/rules/`.
