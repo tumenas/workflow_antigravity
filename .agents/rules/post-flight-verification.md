@@ -1,3 +1,12 @@
+---
+trigger:
+  files:
+    - "analysis/**/*"
+    - "manuscript/**/*.qmd"
+    - "run.ps1"
+    - "Makefile"
+description: Protocolo de verificação de sanidade pós-execução de scripts de análise ou compilação do manuscrito
+---
 # Post-Flight Verification — Verificação Pós-Execução
 
 ## Objetivo

@@ -1,3 +1,10 @@
+---
+trigger:
+  files:
+    - "manuscript/**/*.qmd"
+    - "manuscript/**/*.bib"
+description: Protocolo de revisão de escrita acadêmica, gramática, estilo e fluidez científica
+---
 # Proofreading Protocol — Revisão de Escrita Acadêmica
 
 ## Objetivo

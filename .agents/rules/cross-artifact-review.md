@@ -1,3 +1,10 @@
+---
+trigger:
+  files:
+    - "manuscript/**/*.qmd"
+    - "manuscript/**/*.bib"
+description: Protocolo de revisão cruzada de consistência entre código, dados e manuscrito
+---
 # Cross-Artifact Review — Consistência entre Código e Manuscrito
 
 ## Objetivo

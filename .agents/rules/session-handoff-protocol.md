@@ -1,3 +1,7 @@
+---
+trigger: always_on
+description: Protocolo de continuidade de sessões (Check-in e Check-out)
+---
 # Session Handoff Protocol — Protocolo de Continuidade de Sessão
 
 ## Objetivo

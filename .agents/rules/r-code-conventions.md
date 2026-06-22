@@ -1,3 +1,10 @@
+---
+trigger:
+  files:
+    - "**/*.R"
+    - "**/*.r"
+description: Diretrizes de estilo e qualidade para escrita de código R
+---
 # R Code Conventions — Boas Práticas de Código R
 
 ## Quando Usar R neste Projeto

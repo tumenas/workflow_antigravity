@@ -39,3 +39,7 @@ Entradas mais recentes no final do arquivo.
 [LEARN:quarto] Rótulos de figuras (`#fig-`) e tabelas (`#tbl-`) no Quarto devem ser únicos em todo o documento.
 
 [LEARN:workflow] Arquivos de skills em `.agents/skills/` devem sempre referenciar caminhos sob `.agents/rules/` e nunca sob a pasta antiga `.antigravitycli/rules/`.
+
+[LEARN:antigravity] Regras individuais em `.agents/rules/` exigem cabeçalho YAML frontmatter com `trigger` definido (ex: `always_on` ou padrão de `files`) para serem descobertas e carregadas automaticamente pelo Antigravity.
+
+[LEARN:antigravity] O arquivo `.agents/hooks.json` deve conter os eventos de hooks (`PreToolUse`, `PostToolUse`, etc.) mapeados diretamente no nível raiz do objeto JSON, e não envelopados sob a chave `"workspace-hooks"`.

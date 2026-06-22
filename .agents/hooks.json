@@ -1,0 +1,81 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "Bash|Write|Edit|MultiEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/git-guardrails.py",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "Notification": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "\"$CLAUDE_PROJECT_DIR\"/.agents/hooks/notify.sh",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PreCompact": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/pre-compact.py",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "SessionStart": [
+    {
+      "matcher": "compact|resume",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/post-compact-restore.py",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "Bash|Task",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/context-monitor.py",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Write|Edit|MultiEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/claim-reconcile.py",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.agents/hooks/log-reminder.py",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}

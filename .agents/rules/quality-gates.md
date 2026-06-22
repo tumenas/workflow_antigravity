@@ -1,3 +1,7 @@
+---
+trigger: always_on
+description: Critérios de qualidade e limites (80/90/95) para código e manuscrito
+---
 # Quality Gates — Critérios de Qualidade para Entregas
 
 ## Thresholds

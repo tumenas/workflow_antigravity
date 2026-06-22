@@ -1,3 +1,7 @@
+---
+trigger: always_on
+description: Princípios invioláveis, hierarquia de decisão e limites de escopo do projeto
+---
 # Meta-Governance — Regras Gerais de Integridade do Projeto
 
 ## Princípios Invioláveis

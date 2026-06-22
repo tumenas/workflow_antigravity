@@ -1,3 +1,9 @@
+---
+trigger:
+  files:
+    - "**/*.py"
+description: Diretrizes de estilo e qualidade para escrita de código Python
+---
 # Python Code Conventions — Boas Práticas de Código Python
 
 ## Quando Usar Python neste Projeto

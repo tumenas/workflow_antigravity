@@ -1,3 +1,7 @@
+---
+trigger: always_on
+description: Protocolo de verificação de sanidade em 5 pontos para conclusão de tarefas
+---
 # Verification Protocol — Verificação Final de Execução
 
 ## Objetivo
