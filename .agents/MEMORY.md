@@ -43,3 +43,6 @@ Entradas mais recentes no final do arquivo.
 [LEARN:antigravity] Regras individuais em `.agents/rules/` exigem cabeçalho YAML frontmatter com `trigger` definido (ex: `always_on` ou padrão de `files`) para serem descobertas e carregadas automaticamente pelo Antigravity.
 
 [LEARN:antigravity] O arquivo `.agents/hooks.json` deve conter os eventos de hooks (`PreToolUse`, `PostToolUse`, etc.) mapeados diretamente no nível raiz do objeto JSON, e não envelopados sob a chave `"workspace-hooks"`.
+
+[LEARN:python] Scripts executados no terminal Windows (CMD/PowerShell) devem evitar caracteres unicode não-ASCII (como '↳') em saídas impressas de texto, pois geram exceções UnicodeEncodeError sob codificação CP1252. Use alternativas ASCII (como '->').
+
