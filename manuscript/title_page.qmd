@@ -1,0 +1,18 @@
+---
+title: "[Inserir Título Completo do Artigo]"
+author:
+  - name: Felipe
+    orcid: 0000-0000-0000-0000
+    email: felipe@exemplo.com
+    affiliations:
+      - name: Universidade / Instituição
+        department: Departamento de Economia / Finanças / Administração
+date: last-modified
+format:
+  pdf:
+    documentclass: article
+---
+
+**Agradecimentos:** [Inserir agradecimentos, financiamento (CAPES, CNPq, FAPESB, etc.) e declarações de conflito de interesse.]
+
+**Declaração de Disponibilidade de Dados:** Os códigos de replicação estão disponíveis em [link / repositório].

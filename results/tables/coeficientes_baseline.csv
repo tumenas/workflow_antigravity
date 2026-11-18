@@ -1,0 +1,4 @@
+Variavel,Coeficiente,Erro_Padrao,t_stat,p_valor,N_obs,R2_ajustado
+did,0.026,0.0039,6.744,0.0,640,0.5468
+size_w,0.0049,0.0101,0.485,0.6277,640,0.5468
+leverage_w,-0.0488,0.0075,-6.483,0.0,640,0.5468

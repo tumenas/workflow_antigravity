@@ -13,7 +13,6 @@ ENV/
 .quarto/
 *_files/
 *_cache/
-.ipynb_checkpoints/
 .Rhistory
 .RData
 .Ruserdata
@@ -38,9 +37,6 @@ ENV/
 *.run.xml
 *-blx.bib
 
-# Nota: Se você preferir commitar o PDF final do manuscrito,
-# remova a linha '*.pdf' acima ou adicione '!manuscript/manuscript.pdf'.
-
 # Arquivos de Sistema
 Thumbs.db
 ehthumbs.db
@@ -53,7 +49,6 @@ Desktop.ini
 .antigravitycli/
 .antigravity/
 
-
 # Configurações do IDE
 .vscode/*
 !.vscode/settings.json
@@ -62,23 +57,14 @@ Desktop.ini
 *.swo
 *~
 
-# Relatórios de Qualidade (Ignorar relatórios específicos de sessões/planos/especificações)
-quality_reports/plans/*
-quality_reports/specs/*
-quality_reports/session_logs/*
-quality_reports/merges/*
-quality_reports/decisions/*
-quality_reports/checkpoints/*
-quality_reports/preregistrations/*
-!quality_reports/plans/.gitkeep
-!quality_reports/specs/.gitkeep
-!quality_reports/session_logs/.gitkeep
-!quality_reports/merges/.gitkeep
-!quality_reports/decisions/.gitkeep
-!quality_reports/checkpoints/.gitkeep
-!quality_reports/preregistrations/.gitkeep
+# Dados e Literatura pesada/restrita
+literature/pdfs/*
+!literature/pdfs/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+replication_package/*.zip
 
-# Logs e relatórios locais (conteúdo é específico de sessão, não compartilhar)
+# Relatórios de Qualidade
 quality_reports/plans/*
 quality_reports/specs/*
 quality_reports/session_logs/*

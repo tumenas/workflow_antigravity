@@ -1,0 +1,24 @@
+---
+title: "Response to Referees"
+subtitle: "[Insert Paper Title] — [Journal Name]"
+date: last-modified
+format:
+  pdf:
+    documentclass: article
+---
+
+We thank the Editor and the Referees for their constructive comments and valuable suggestions, which have significantly improved the manuscript. Below, we address each comment point by point.
+
+# Response to Referee 1
+
+## Comment 1.1
+> *[Paste referee comment here]*
+
+**Response:** [Explain clearly what was changed and where in the manuscript.]
+
+# Response to Referee 2
+
+## Comment 2.1
+> *[Paste referee comment here]*
+
+**Response:** [Explain clearly what was changed and where in the manuscript.]

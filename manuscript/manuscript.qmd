@@ -1,5 +1,5 @@
 ---
-title: "Template de Artigo Científico Reprodutível"
+title: "Template de Artigo Empírico em Economia, Finanças e Administração"
 subtitle: "Aplicação prática do padrão Research Compendium em Python e Quarto"
 author:
   - name: Felipe
@@ -7,15 +7,14 @@ author:
     email: felipe@exemplo.com
     affiliations:
       - name: Universidade Exemplo
-        department: Departamento de Ciência de Dados
-        address: Salvador, Bahia, Brasil
+        department: Departamento de Economia / Finanças / Administração
 date: last-modified
 abstract: |
-  Este documento serve como modelo para a redação de artigos científicos reprodutíveis utilizando o Quarto e Python. O resumo (abstract) deve sintetizar de forma clara o problema investigado, os métodos aplicados, os resultados obtidos (incluindo métricas numéricas se aplicável) e as conclusões principais. O padrão Research Compendium garante que qualquer leitor ou revisor possa reproduzir exatamente estes resultados a partir dos dados brutos fornecidos no repositório.
+  Este documento serve como modelo para artigos empíricos reprodutíveis em Economia, Finanças e Administração utilizando Quarto e Python. O exemplo ilustra uma estratégia de Difference-in-Differences (DiD) em painel de firmas-ano com efeitos fixos de firma e tempo.
 keywords:
   - Reprodutibilidade
   - Research Compendium
-  - Python
+  - Econometria Aplicada
   - Quarto
 bibliography: references.bib
 lang: pt
@@ -38,79 +37,52 @@ format:
 
 # Introdução
 
-A introdução deve contextualizar o problema de pesquisa, revisar brevemente a literatura pertinente e apresentar o objetivo do trabalho. Em pesquisas reprodutíveis, é importante conectar a teoria diretamente à implementação computacional.
+A introdução contextualiza o problema econômico ou financeiro, apresenta a lacuna na literatura [@wilson2017good; @marwick2018packaging] e sintetiza a contribuição empírica do trabalho.
 
-Como discutido na literatura clássica por @wilson2017good, a organização dos arquivos de uma pesquisa desempenha um papel crucial na capacidade de terceiros reproduzirem as análises. O uso de ferramentas como o Quarto e ambientes controlados minimiza o esforço para validar descobertas científicas [@marwick2018packaging].
+# Dados e Estratégia Empírica
 
-# Metodologia
+Os dados brutos originais são mantidos de forma imutável em `data/raw/firmas_brutas.csv`. O tratamento, winsorização (1%/99%) e construção do painel ocorrem em `src/2_data_treatment/02_clean_and_merge.py`, gerando `data/processed/painel_final.csv`.
 
-Os métodos descrevem as técnicas de coleta e processamento de dados. 
+## Especificação Econométrica
 
-## Dados e Amostra
+Estimamos o impacto de um choque regulatório sobre o Retorno sobre Ativos (ROA) por meio do seguinte modelo de *Difference-in-Differences* (DiD) com efeitos fixos bidirecionais:
 
-Os dados brutos originais estão salvos de forma imutável em `data/raw/dados_brutos.csv`. O processamento inicial consistiu na remoção de valores nulos e no cálculo de variáveis derivadas, implementado no script `analysis/01_clean_data.py`. Os dados limpos foram salvos em `data/processed/dados_processados.csv`.
+$$ROA_{it} = \alpha_i + \gamma_t + \beta \, (\text{Treated}_i \times \text{Post}_t) + \mathbf{X}_{it}'\theta + \varepsilon_{it}$$ {#eq-modelo}
 
-## Modelo Estatístico
-
-Ajustamos um modelo de regressão linear para avaliar o impacto da idade e do marcador biológico sobre a pressão arterial sistólica. A equação do modelo é dada por:
-
-$$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \sum_{j} \gamma_j D_{ji} + \epsilon_i$$ {#eq-modelo}
-
-Onde:
-
-- $Y_i$: Pressão Arterial Sistólica (mmHg) do indivíduo $i$.
-- $X_{1i}$: Idade (anos).
-- $X_{2i}$: Nível do Marcador Biológico (u/mL).
-- $D_{ji}$: Variáveis dummy para o grupo de tratamento.
-- $\epsilon_i$: Erro aleatório.
+Onde $\alpha_i$ representa efeitos fixos de firma, $\gamma_t$ efeitos fixos de ano, e $\mathbf{X}_{it}$ o vetor de controles (Tamanho e Alavancagem), com erros-padrão clusterizados no nível da firma.
 
 # Resultados
 
-A análise foi executada utilizando Python e as bibliotecas científicas especificadas em `requirements.txt`.
+## Análise Descritiva e Tendências Paralelas
 
-## Análise Descritiva
+A @fig-paralelas apresenta a evolução do ROA médio entre os grupos tratado e controle antes e após o choque regulatório de 2020.
 
-A distribuição do marcador biológico entre os diferentes grupos de tratamento está ilustrada na @fig-boxplot. Nota-se visualmente a variabilidade entre os grupos.
+![Tendências Paralelas do ROA médio por grupo (2016–2023).](../results/figures/tendencias_paralelas_roa.png){#fig-paralelas width=80% fig-align="center"}
 
-![Distribuição do Marcador Biológico por Grupo de Tratamento.](../results/figures/boxplot_marcador_grupo.png){#fig-boxplot width=80% fig-align="center"}
+## Modelo Baseline
 
-A @fig-dispersao exibe a relação entre a idade dos participantes e a pressão arterial sistólica, separada por grupo, com as respectivas retas de tendência linear estimadas.
-
-![Dispersão entre Idade e Pressão Arterial com retas de tendência por Grupo.](../results/figures/dispersao_pressao_idade.png){#fig-dispersao width=80% fig-align="center"}
-
-## Modelo de Regressão
-
-Os resultados do modelo de regressão linear ajustado conforme a @eq-modelo são apresentados na @tbl-regressao.
+Os resultados da estimação da @eq-modelo estão reportados na @tbl-regressao.
 
 ```{python}
 #| label: tbl-regressao
-#| tbl-cap: "Coeficientes do modelo de regressão linear (variável dependente: pressão arterial sistólica)."
+#| tbl-cap: "Efeito do Choque Regulatório sobre o ROA (Diff-in-Diff com Efeitos Fixos)."
 #| echo: false
 
-import pandas as pd
 import os
+import pandas as pd
+from IPython.display import Markdown
 
-coef_path = "../results/tables/coeficientes_regressao.csv"
-
+coef_path = "../results/tables/coeficientes_baseline.csv"
 if os.path.exists(coef_path):
-    df_coef = pd.read_csv(coef_path, index_index=False if 'Unnamed: 0' in pd.read_csv(coef_path, nrows=1).columns else None)
-    # Se o pandas ler a coluna de índices sem nome, vamos renomeá-la
-    if 'Unnamed: 0' in df_coef.columns:
-        df_coef = df_coef.rename(columns={'Unnamed: 0': 'Variável'})
-    
-    # Exibir tabela formatada em Markdown
-    from IPython.display import Markdown
+    df_coef = pd.read_csv(coef_path)
     Markdown(df_coef.to_markdown(index=False))
 else:
-    from IPython.display import Markdown
-    Markdown("*Aviso: Os resultados da regressão ainda não foram gerados. Execute o script `analysis/02_analysis.py` para visualizar a tabela.*")
+    Markdown("*Execute `python src/00_master.py` para gerar os resultados.*")
 ```
 
-# Discussão e Conclusão
+# Conclusão
 
-A discussão contextualiza os achados em relação à literatura existente. Os resultados estatísticos indicam se as hipóteses iniciais foram confirmadas.
-
-Em suma, este compêndio fornece um fluxo de trabalho estruturado e auditável que atende às diretrizes de ciência aberta e reprodutível. Toda a pipeline de compilação deste manuscrito e execução de códigos pode ser automatizada com o arquivo `Makefile` ou o script `run.ps1` inclusos na raiz do projeto.
+Este compêndio fornece uma estrutura completa, modular e compatível com o padrão AEA/DCAS de replicação para artigos empíricos.
 
 # Referências
 

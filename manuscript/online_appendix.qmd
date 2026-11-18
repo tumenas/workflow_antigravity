@@ -1,0 +1,14 @@
+---
+title: "Apêndice Online (Online Appendix)"
+subtitle: "[Inserir Título do Artigo]"
+date: last-modified
+lang: pt
+format:
+  pdf:
+    documentclass: article
+    number-sections: true
+---
+
+# Testes de Robustez Adicionais
+
+Este apêndice apresenta tabelas suplementares, testes placebo e especificações alternativas que complementam o artigo principal.
