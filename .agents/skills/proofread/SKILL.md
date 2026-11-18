@@ -1,3 +1,8 @@
+﻿---
+name: proofread
+description: Grammar, spelling, and academic style proofreading for manuscripts.
+---
+
 # Skill: proofread
 
 **Descrição:** Revisão detalhada de gramática, ortografia, estilo acadêmico e fluidez do manuscrito. Não altera conteúdo científico, apenas a forma da escrita.

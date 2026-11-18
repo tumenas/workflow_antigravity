@@ -1,3 +1,8 @@
+﻿---
+name: review-paper
+description: Comprehensive scientific paper review (single-pass, adversarial, or simulated peer review calibrated to target journal).
+---
+
 # Skill: review-paper
 
 **Descrição:** Revisão científica completa de um manuscrito acadêmico. Suporta três modos: revisão única (padrão), loop adversarial crítico-corretor, e simulação de revisão por pares calibrada a um periódico-alvo.

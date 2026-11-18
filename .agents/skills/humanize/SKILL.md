@@ -1,3 +1,8 @@
+﻿---
+name: humanize
+description: Detect and flag AI-sounding prose patterns in scientific writing (read-only).
+---
+
 # Skill: humanize
 
 **Descrição:** Auditoria read-only da prosa acadêmica para detectar padrões típicos de linguagem gerada por IA. Não reescreve — apenas identifica e sinaliza para o autor revisar manualmente.

@@ -1,3 +1,8 @@
+﻿---
+name: research-ideation
+description: Brainstorm research questions, identification strategies, and empirical specifications.
+---
+
 # Skill: research-ideation
 
 **Descrição:** Brainstorming estruturado de questões de pesquisa, especificações de modelos, estratégias de identificação e verificações de robustez para um projeto acadêmico em desenvolvimento.

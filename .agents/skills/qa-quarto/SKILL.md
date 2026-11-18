@@ -1,3 +1,8 @@
+﻿---
+name: qa-quarto
+description: Adversarial QA of compiled Quarto manuscripts (layout, cross-references, figures, tables).
+---
+
 # Skill: qa-quarto
 
 **Descrição:** Revisão de qualidade adversarial do documento Quarto compilado — verifica layout, referências, figuras, tabelas e consistência entre texto e outputs gerados.

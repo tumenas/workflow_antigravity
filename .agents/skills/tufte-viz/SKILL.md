@@ -1,3 +1,8 @@
+﻿---
+name: tufte-viz
+description: Data visualization critique and design based on Edward Tufte principles.
+---
+
 # Skill: tufte-viz
 
 **Descrição:** Ideação e crítica de visualizações de dados com base nos princípios clássicos de Edward Tufte (*The Visual Display of Quantitative Information*, *Envisioning Information* e *Beautiful Evidence*). Foca na maximização do *data-ink ratio*, na eliminação de *chartjunk*, na integridade gráfica, no cálculo do *lie factor*, no uso de múltiplos pequenos (*small multiples*) e na alta densidade de informação integrada.

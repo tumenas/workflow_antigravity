@@ -1,3 +1,8 @@
+﻿---
+name: interview-me
+description: Socratic interview to elicit and clarify methodology, sample selection, and identification assumptions.
+---
+
 # Skill: interview-me
 
 **Descrição:** Entrevista socrática interativa para elicitar e clarificar a metodologia de pesquisa. O assistente faz perguntas progressivas para ajudar o pesquisador a articular com precisão o que está fazendo e por quê.

@@ -1,3 +1,8 @@
+﻿---
+name: lit-review
+description: Structure literature search, synthesis matrix (literature/literature_matrix.md), and hypothesis positioning.
+---
+
 # Skill: lit-review
 
 **Descrição:** Estrutura um plano de revisão de literatura para um tópico de pesquisa, organizando as dimensões a explorar, estratégias de busca e síntese.

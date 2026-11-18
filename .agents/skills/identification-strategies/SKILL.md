@@ -1,3 +1,8 @@
+﻿---
+name: identification-strategies
+description: Guide for writing and structuring causal identification sections (DiD, IV, RDD, Matching, Event Study).
+---
+
 # Writing by Identification Strategy
 
 Different identification strategies and paper types require different narrative structures. Adapt your writing to the method.

@@ -1,3 +1,8 @@
+﻿---
+name: seven-pass-review
+description: Seven-pass parallel manuscript review (abstract, intro, methods, results, robustness, prose, references) before submission.
+---
+
 # Skill: seven-pass-review
 
 **Descrição:** Revisão de sete lentes independentes em paralelo, depois sintetizada. Mais pesada que `review-paper` (custo de contexto ~7×). Indicada para rascunhos prontos para submissão ou estágio de R&R onde máxima cobertura é necessária.
